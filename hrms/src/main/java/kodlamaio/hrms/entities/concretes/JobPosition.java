@@ -7,13 +7,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Entity	// JobPosition bir entity'dir (Sen bir veritabanı nesnesisin arkadaşım demek)
 @Table(name="job_positions")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+
 
 public class JobPosition {
 	
@@ -24,21 +28,6 @@ public class JobPosition {
 	
 	@Column(name="title")
 	private String title;
-	
 
-	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	
 }

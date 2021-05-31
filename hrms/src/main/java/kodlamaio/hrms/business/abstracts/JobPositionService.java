@@ -1,9 +1,12 @@
 package kodlamaio.hrms.business.abstracts;
 
-import java.util.List;
-
+import kodlamaio.hrms.core.utilities.verification.DataResult;
+import kodlamaio.hrms.core.utilities.verification.Result;
 import kodlamaio.hrms.entities.concretes.JobPosition;
 
+import java.util.List;
+
 public interface JobPositionService {
-	List<JobPosition> getAll();
+	DataResult<List<JobPosition>> getAll();
+	Result add(JobPosition jobPosition);
 }
